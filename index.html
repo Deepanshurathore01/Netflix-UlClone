@@ -6,9 +6,12 @@
   <title>Netflix Reimagine</title>
   <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" /> <!-- Recommended -->
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="Responsiv.css">
 </head>
 <body>
+  <!-- <div id="mincircle">
 
+  </div> -->
   <div id="main">
  
     <!-- Nav Section  -->
@@ -27,6 +30,7 @@
       </div>
      </nav>
 
+     <!-- first section starts here  -->
      <div id="first">
       <div class="container">
         <section>
@@ -44,17 +48,17 @@
       </div>
      </div>
 
-     <!-- second section start -->
+     <!-- second section start here  -->
       <div id="second">
         <div class="left">
-          <img src="Images/images (1).jpeg" alt="">
-          <img src="Images/images (2).jpeg" alt="">
-          <img src="Images/images (3).jpeg" alt="">
-          <img src="Images/Kaliki.jpg" alt="">
-          <img src="Images/images (5).jpeg" alt="">
-          <img src="Images/images (8).jpeg" alt="">
-          <img src="Images/images (9).png" alt="">
-          <img src="Images/Images 10.jpeg" alt="">
+          <img class="ImgAnimation" src="Images/images (1).jpeg" alt="">
+          <img class="ImgAnimation" src="Images/images (2).jpeg" alt="">
+          <img class="ImgAnimation" src="Images/images (3).jpeg" alt="">
+          <img class="ImgAnimation" src="Images/Kaliki.jpg" alt="">
+          <img class="ImgAnimation" src="Images/giphy.gif" alt="">
+          <img class="ImgAnimation" src="Images/images (5).jpeg" alt="">
+          <img class="ImgAnimation" src="Images/images (9).png" alt="">
+          <img class="ImgAnimation" src="Images/Images 10.jpeg" alt="">
         </div>
         <div class="right">
           <h1>Enjoy on your TV</h1>
@@ -62,7 +66,29 @@
         
         </div>
       </div>
-
+      <!-- third section start -->
+       <div id="third">
+        <div class="phone">
+          <img
+            src="https://media.istockphoto.com/id/1303344250/photo/television-streaming-multimedia-wall-concept.webp?b=1&s=170667a&w=0&k=20&c=YpHUiFWhFJf422sN4XSE2-uD4NaDKbeMN9zmXaWdLhY="
+            alt="Phone Image"
+            class="phone-img"
+          />
+        </div>
+        <div class="text">
+          <h1>Download your shows to watch offline</h1>
+          <p>Save your favourites easily and always have something to watch.</p>
+          <div class="show-downloading">
+            <img
+              src="https://media.istockphoto.com/id/1303344250/photo/television-streaming-multimedia-wall-concept.webp?b=1&s=170667a&w=0&k=20&c=YpHUiFWhFJf422sN4XSE2-uD4NaDKbeMN9zmXaWdLhY="
+              alt="Stranger Things"
+            />
+            <p>Stranger Things<br /><span>Downloading...</span></p>
+            <div class="loader"></div>
+          </div>
+        </div>
+       </div>
+     <!-- fourth section start here  -->
       <div id="fourth">
         <div class="text">
           <h1>Watch everywhere</h1>
@@ -83,7 +109,57 @@
 
 
   </div>
+
+  <!-- fifth section -->
+   <div id="fifth">
+    <div class="child">
+      <img src="Images/kid.jpeg" alt="">
+    </div>
+    <div class="textchild">
+      <h1>Create profiles for kids</h1>
+      <p>Send children on adventures with their favourite characters in a space made just for them—free with your membership. </p>
+    
+    </div>
+   </div>
+
+   <!-- footer section -->
+    <div id="footer">
+      <h5>Questions? Call <a href="tel:000-800-919-1694">000-800-919-1694</a></h5>
+      <div class="allset">
+        <div class="f1">
+          <h4>FAQ</h4>
+          <h4>Investor Relations</h4>
+          <h4>Privacy</h4>
+          <h4>Speed Test</h4>
+        </div>
+        <div class="f2">
+          <h4>Help Centre</h4>
+          <h4>Jobs</h4>
+          <h4>Cookie Preferences</h4>
+          <h4>Legal Notices</h4>
+        </div>
+        <div class="f3">
+          <h4>Account</h4>
+          <h4>Ways to Watch</h4>
+          <h4>Corporate Information</h4>
+          <h4>Only on Netflix</h4>
+        </div>
+        <div class="f4">
+          <h4>Media Centre</h4>
+          <h4>Terms of Use</h4>
+          <h4>Contact Us</h4>
+        </div>
+      </div>
+      <div class="part2">
+        <select name="English" id="English">
+          <option value="English"><h1>English</h1></option>
+          <option value="Hindi"><h1>Hindi</h1></option>
+        </select></div>
+     <h5 class="lasth">Netflix India</h5>
+    </div>
  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.165.0/three.cjs"></script>
   <script src="script.js"></script>
 </body>

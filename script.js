@@ -1,32 +1,22 @@
-Shery.imageEffect("#back",{style: 5,config : {"a":{"value":1.83,"range":[0,30]},"b":{"value":-0.94,"range":[-1,1]},"zindex":{"value":-9996999,"range":[-9999999,9999999]},"aspect":{"value":2.12318011932943},"ignoreShapeAspect":{"value":true},"shapePosition":{"value":{"x":0,"y":0}},"shapeScale":{"value":{"x":0.5,"y":0.5}},"shapeEdgeSoftness":{"value":0,"range":[0,0.5]},"shapeRadius":{"value":0,"range":[0,2]},"currentScroll":{"value":0},"scrollLerp":{"value":0.07},"gooey":{"value":true},"infiniteGooey":{"value":true},"growSize":{"value":1,"range":[1,15]},"durationOut":{"value":1,"range":[0.1,5]},"durationIn":{"value":1.5,"range":[0.1,5]},"displaceAmount":{"value":0.5},"masker":{"value":true},"maskVal":{"value":1.24,"range":[1,5]},"scrollType":{"value":0},"geoVertex":{"range":[1,64],"value":1},"noEffectGooey":{"value":false},"onMouse":{"value":0},"noise_speed":{"value":0.92,"range":[0,10]},"metaball":{"value":0.17,"range":[0,2]},"discard_threshold":{"value":0.5,"range":[0,1]},"antialias_threshold":{"value":0,"range":[0,0.1]},"noise_height":{"value":0.5,"range":[0,2]},"noise_scale":{"value":12.21,"range":[0,100]}},gooey:true})
+function circleChaptakaro() {
+  var xscale = 1;
+  var yscale = 1;
+  var xprev = 0;
+  var yprev = 0;
 
-var elems = document.querySelectorAll(".elem");
+  window.addEventListener("mousemove", function(dets) {
+    xscale = gsap.utils.clamp(0.8, 1.2, 1 + (dets.clientX - xprev) * 0.01);
+    yscale = gsap.utils.clamp(0.8, 1.2, 1 + (dets.clientY - yprev) * 0.01);
 
-elems.forEach(function(elem){
-  var h1s = elem.querySelectorAll("h1");
-  var index = 0;
-  var animating = false;
+    xprev = dets.clientX;
+    yprev = dets.clientY;
 
-  document.querySelector('#main').addEventListener("click", function() {
-    if(!animating) {
-      animating = true;
-      gsap.to(h1s[index], {
-        top: '-=100%',
-        ease: Expo.easeInOut,
-        duration: 1,
-        onComplete: function() {
-          gsap.set(this.targets()[0], {top: '100%'});
-          animating = false;
-        }
-      });
-      
-      index = (index + 1) % h1s.length; // Properly wrap around the index
-
-      gsap.to(h1s[index], {
-        top: '-=100%',
-        ease: Expo.easeInOut,
-        duration: 1
-      });
-    }
+    circleMouseFollower(dets.clientX, dets.clientY, xscale, yscale);
   });
-});
+}
+
+function circleMouseFollower(clientX, clientY, xscale, yscale) {
+  document.querySelector('#mincircle').style.transform = `translate(${clientX}px, ${clientY}px) scale(${xscale}, ${yscale})`;
+}
+
+circleChaptakaro();
