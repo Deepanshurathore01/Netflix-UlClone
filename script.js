@@ -1,22 +1,14 @@
-function circleChaptakaro() {
-  var xscale = 1;
-  var yscale = 1;
-  var xprev = 0;
-  var yprev = 0;
+var a = document.querySelector('.signup');
 
-  window.addEventListener("mousemove", function(dets) {
-    xscale = gsap.utils.clamp(0.8, 1.2, 1 + (dets.clientX - xprev) * 0.01);
-    yscale = gsap.utils.clamp(0.8, 1.2, 1 + (dets.clientY - yprev) * 0.01);
+a.addEventListener('click', function() {
+    // alert("Hello world");
+});
 
-    xprev = dets.clientX;
-    yprev = dets.clientY;
+const bgAnimated = document.getElementById('bgAnimate');
+const numberOfColorBoxes = 400;
 
-    circleMouseFollower(dets.clientX, dets.clientY, xscale, yscale);
-  });
+for (let i = 0; i < numberOfColorBoxes; i++) {
+  const colorBox = document.createElement('div');
+  colorBox.classList.add('colorBox');
+  bgAnimated.append(colorBox);
 }
-
-function circleMouseFollower(clientX, clientY, xscale, yscale) {
-  document.querySelector('#mincircle').style.transform = `translate(${clientX}px, ${clientY}px) scale(${xscale}, ${yscale})`;
-}
-
-circleChaptakaro();

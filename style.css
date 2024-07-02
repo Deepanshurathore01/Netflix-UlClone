@@ -8,7 +8,7 @@ html, body {
   width: 100%;
   height: 100%;
   color: #fff;
-  background: #000;
+  background:#1d1d1d;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 /* Mini circle  */
@@ -23,13 +23,60 @@ html, body {
   pointer-events: none;
 }
 
+
 #main{
   width: 100%;
   height: 100%;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  backdrop-filter: blur(1px);
+  position: relative;
+}
+.bgAnimate {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(20, 1fr);
+  grid-template-rows: repeat(20, 1fr);
+  background:#1d1d1d;
+  filter: saturate(2);
+  overflow: hidden;
+  z-index: 0;
 }
 
-/* background */
+.bacgroundAdmin {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background: #f61d5e;
+  filter: blur(50px);
+  animation: animBack 7s linear infinite;
+}
+@keyframes animBack {
+  0% {
+    top: -60px;
+  }
+  100% {
+    top: 120%;
+  }
+}
+
+.colorBox {
+  z-index: 2;
+  filter: brightness(1.1);
+  transition: 2s ease;
+  position: relative;
+  margin: 2px;
+  background: #1d1d1d;
+}
+.colorBox:hover {
+  background: #e96c73;
+  transition-duration: 0s;
+}
 
 
 /* Nav Section start */
@@ -41,6 +88,9 @@ nav{
   justify-content: space-between;
   align-items: center;
   padding: 0 100px;
+  box-sizing: border-box;
+  z-index: 3;
+  pointer-events: auto; /* Enable pointer events for nav */
 }
 
 
@@ -49,10 +99,12 @@ nav{
   color: #e50914;
   margin-left: 30px;
   transition: transform 0.3s ease;
+  cursor: pointer;
 }
 
 .part1:hover {
   transform: scale(1.2);
+  color: #fff;
 }
 
 .part2{
@@ -307,11 +359,13 @@ nav{
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     animation: pulse 2s infinite;
+    cursor: pointer;
   }
   
   .show-downloading img {
     width: 50px;
     margin-right: 10px;
+    
   }
   
   .show-downloading p {
