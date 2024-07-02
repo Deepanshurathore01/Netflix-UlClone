@@ -11,14 +11,14 @@
   }
   
 .part1 {
-  font-size: 22px;
+  font-size:1.1rem;
   color: #e50914;
   margin-left: 10px;
   transition: transform 0.3s ease;
 }
 
 .part1:hover {
-  transform: scale(1.2);
+  transform: scale(0.8);
 }
 .part2{
   display: flex;
@@ -39,13 +39,14 @@
 
 #first{
   width: 100vw;
-  margin-bottom: 20px;
+  height: 100vh;
+  /* margin-bottom: 20px; */
 }
 #first .container {
   width: 100vw;
   min-height: 80vh;
   backdrop-filter: blur(1px);
-  pointer-events: none;
+  pointer-events: all;
   position: relative;
 }
 .container section {
@@ -54,20 +55,16 @@
   align-items: center;
   flex-direction: column;
   height: 100%;
-  text-align: center;
-  pointer-events: none;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  /* text-align: center; */
+  padding-bottom: 20px;
+ 
 }
 .textBox h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 900;
 }
 .textBox p {
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 .below {
   width: 100%;
@@ -93,6 +90,7 @@
   flex-direction: column;
   padding: 0 10px;
   margin-top: 100px;
+  gap: 40px;
   }
   #second .left{
     width: 100%;
@@ -110,7 +108,7 @@
   
   }
   #second .right h1{
-    font-size: 3rem;
+    font-size: 3.1rem;
     font-weight: 900;
   }
 
@@ -123,11 +121,11 @@
   #third .phone,
   #third .text {
     width: 100%;
-    padding: 10px;
+    padding:30px 20px;
   }
 
   .show-downloading {
-    bottom: 150px;
+    bottom: 195px;
     left: 50%;
     transform: translateX(-50%);
     padding: 5px;
@@ -187,4 +185,41 @@
     #fifth .textchild h1{
       font-size: 2.9rem;
     }
+
+    #sixth{
+      width: 100%;
+      
+    }
+    #sixth h1{
+      font-size: 1.9rem;
+      padding: 20px 0;
+      text-align: center;
+    }
+    .accordion {
+      width: 90%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+  }
+  #footer{
+    width: 100%;
+    line-height: 25px;
+    padding: 20px 20px;
+    border-top: 2px solid grey;
+   
+  }
+  .lasth{
+    font-size: 3rem;
+    padding: 40px 0;
+    
+  }
+  #footer select{
+    background: transparent;
+    color: #fff;
+    border-radius: 4px;
+    padding: 2px 5px;
+  
+  }
+
 }

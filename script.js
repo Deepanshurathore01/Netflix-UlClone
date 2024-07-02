@@ -1,8 +1,3 @@
-var a = document.querySelector('.signup');
-
-a.addEventListener('click', function() {
-    // alert("Hello world");
-});
 
 const bgAnimated = document.getElementById('bgAnimate');
 const numberOfColorBoxes = 400;
@@ -12,3 +7,22 @@ for (let i = 0; i < numberOfColorBoxes; i++) {
   colorBox.classList.add('colorBox');
   bgAnimated.append(colorBox);
 }
+
+// accrodian
+const ourItemDiv = document.getElementsByClassName("item");
+const openIcon = document.getElementsByClassName("iconopen");
+const closeIcon = document.getElementsByClassName("iconclose");
+
+
+
+for (let i = 0; i < ourItemDiv.length; i++) {
+    ourItemDiv[i].addEventListener("click", () => {
+        ourItemDiv[i].classList.toggle("active");
+    });
+}
+
+
+
+
+
+
