@@ -1,5 +1,5 @@
 
-const bgAnimated = document.getElementById('bgAnimate');
+const bgAnimated = document.getElementById('bgAnimated');
 const numberOfColorBoxes = 400;
 
 for (let i = 0; i < numberOfColorBoxes; i++) {
