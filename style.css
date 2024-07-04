@@ -534,17 +534,52 @@ nav {
     display: flex;
     align-items: center;
     position: relative;
+  
   }
 
   #fifth .child{
     width: 50%;
-   
-   
+    height: 80vh;
+    margin: auto;
+    
+  }
+  .child img:first-child{
+    width: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+    transition: all 0.3s ease;
+  }
+  .child img:last-child{
+    position: absolute;
+    width: 60%;
+    top: 0;
+    left: -50%;
+    right: 0;
+    bottom: 30%;
+    margin: auto;
+    transform: translateY(30%);
+    opacity: 0;
+    transition: all 0.3s ease;
+  }
+  .child:hover img:first-child{
+    transform: perspective(250px) rotateX(40deg)translateY(-5%)translateZ(0);
+    
+  
+  }
+  .child:hover::before{
+    opacity: 1;
+  }
+  .child:hover img:last-child{
+    opacity: 1;
+    transform: translateY(10px);
   }
   
   #fifth .textchild{
+    /* text-align: center; */
   width: 50%;
   gap: 10px;
+  padding: 0 30px;
+  z-index:999;
   }
 
   #fifth .textchild h1{
@@ -660,6 +695,10 @@ h2 {
     font-weight: 200;
     text-decoration: underline;
     cursor: pointer;
+  }
+  .allset a{
+    text-decoration: none;
+    color: #fff;
   }
   .lasth{
     font-size: smaller;
