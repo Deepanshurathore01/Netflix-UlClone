@@ -106,10 +106,12 @@ nav {
   color: #fff;
   border-radius: 4px;
   padding: 2px 5px;
+  background: transparent;
 }
 
 .part2 select option {
   color: #000;
+  
 }
 
 .signup {
