@@ -426,7 +426,7 @@ nav {
 
 
   :root {
-    --cube-size: 180px;
+    --cube-size: 220px;
     --translateZ: calc(var(--cube-size) / 2);
   }
   #fourth{
@@ -457,7 +457,7 @@ nav {
   }
   #fourth .text p{
 
-    font-size: 20px;
+    font-size: 1.7rem;
     padding: 1% ;
   }
    .cube-container {
